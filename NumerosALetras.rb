@@ -1,7 +1,16 @@
 class Ordinal
 
+	POSICION = [
+		["cero","uno", "dos", "tres", "cuatro", "cinco", "seis","siete","ocho", "nueve"],
+		["diez", "once", "doce", "trece", "catorce", "quince", "dieci","dieci","dieci", "dieci"],
+		["veinti", "treinta y ", "cuarenta y", "cincuenta y", "sesenta y", "setenta y", "ochenta y", "noventa y"]
+		["ciento", "cientos"],
+		["mil"],
+		["millón", "millones"]
+	]
+
 	def initialize(numero)
-	
+		@numero = numero
 		end
 end
 
