@@ -1,10 +1,10 @@
 class Ordinal
 
 	POSICION = [
-		["cero","uno", "dos", "tres", "cuatro", "cinco", "seis","siete","ocho", "nueve"],
+		["cero","un","uno", "dos", "tres", "cuatro", "cinco", "seis","siete","ocho", "nueve"],
 		["diez", "once", "doce", "trece", "catorce", "quince", "dieci","dieci","dieci", "dieci"],
-		["veinti", "treinta y ", "cuarenta y", "cincuenta y", "sesenta y", "setenta y", "ochenta y", "noventa y"]
-		["ciento", "cientos"],
+		["veinti", "treinta y ", "cuarenta y", "cincuenta y", "sesenta y", "setenta y", "ochenta y", "noventa y"],
+		["cien", "ciento", "cientos"],
 		["mil"],
 		["millón", "millones"]
 	]
@@ -12,6 +12,22 @@ class Ordinal
 	def initialize(numero)
 		@numero = numero
 		end
+
+	def entero_decimal
+		numero_partido = @numero.split('.')
+		if numero_partido[0] = "0"
+			numero_partido[0] = ""
+		end
+		puts numero_partido 
+		gets.chomp
+	end
+
+	def letras_entero
+	end
+
+	def letras_decimal
+	end
+
 end
 
 def entrada_numero()
@@ -25,6 +41,9 @@ def entrada_numero()
 			numero = gets.chomp
 			comprobar_numero(numero)
 			ordinal = Ordinal.new(numero)
+			ordinal.entero_decimal
+			ordinal.letras_entero
+			ordinal.letras_decimal
 		end
 	end
 end
